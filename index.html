@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body class="my-10 px-10 max-w-[800px] mx-auto">
+    <div class="add">
+      <h1 class="text-3xl font-semibold">Task List</h1>
+      <form class="flex gap-3 items-center" id="add-task">
+        <div class="my-3">
+          <input
+            type="text"
+            class="py-2 px-4 rounded-md hover:border-sky-200 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-200 focus:border-transparent"
+            placeholder="New Task"
+            name="task"
+          />
+        </div>
+        <div class="my-3">
+          <button
+            type="submit"
+            class="py-2 px-3 bg-violet-600 rounded-md text-white hover:bg-violet-700"
+            style="text-transform: uppercase"
+          >
+            Add Task
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="my-2">
+      <hr class="border-none h-[2px] bg-zinc-300" />
+    </div>
+
+    <div class="my-5">
+      <h2 class="text-3xl font-semibold">Tasks</h2>
+      <form class="flex gap-3 items-center" id="filter-task">
+        <div class="my-3">
+          <input
+            type="text"
+            placeholder="filter task"
+            class="border focus:border-sky-300 py-2 px-3 rounded-md border-zinc-200 focus:outline-none focus:ring-2 focus:ring-sky-200 focus:border-transparent"
+          />
+        </div>
+      </form>
+      <div class="">
+        <ol class="task-list space-y-2"></ol>
+      </div>
+    </div>
+
+    <div class="clear-task my-2">
+      <button
+        id="clear-all-task"
+        class="py-2 px-3 text-white rounded-md bg-red-400 uppercase hidden"
+      >
+        clear all task
+      </button>
+    </div>
+
+    <script src="./src/app.js"></script>
+  </body>
+</html>
