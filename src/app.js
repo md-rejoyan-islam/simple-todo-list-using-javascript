@@ -1,5 +1,10 @@
+// task add form
 const addTask = document.getElementById("add-task");
+
+// clear all task button
 const clearAllTask = document.getElementById("clear-all-task");
+
+// filter task input
 const filterTask = document.getElementById("filter-task");
 
 addTask.addEventListener("submit", handleSubmit);
@@ -14,6 +19,7 @@ function handleSubmit(e) {
   const data = new FormData(form);
   const { task } = Object.fromEntries(data);
 
+  // check if task is empty
   if (!task) return alert("Please enter a task");
 
   const newTask = document.createElement("li");
