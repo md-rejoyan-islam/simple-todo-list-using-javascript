@@ -27,10 +27,8 @@ if (tasks) {
     );
 
     deleteBtn.addEventListener("click", deleteTask);
-
     newTask.textContent = task;
     newTask.appendChild(deleteBtn);
-
     newTask.classList.add("task", "list-inside", "list-decimal");
     const list = document.querySelector(".task-list");
     clearAllTask.classList.remove("hidden");
@@ -38,6 +36,7 @@ if (tasks) {
   });
 }
 
+// event listener
 addTask.addEventListener("submit", handleSubmit);
 clearAllTask.addEventListener("click", clearTasks);
 filterTask.addEventListener("keyup", filterTaskByKeyword);
