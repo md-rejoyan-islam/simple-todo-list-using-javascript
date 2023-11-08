@@ -88,6 +88,7 @@ function clearTasks(e) {
   const list = document.querySelector(".task-list");
   list.innerHTML = "";
   clearAllTask.classList.add("hidden");
+  localStorage.removeItem("tasks");
 }
 
 // delete task
