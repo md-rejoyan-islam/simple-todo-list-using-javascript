@@ -88,6 +88,7 @@ function clearTasks(e) {
   const list = document.querySelector(".task-list");
   list.innerHTML = "";
   clearAllTask.classList.add("hidden");
+  // clear local storage
   localStorage.removeItem("tasks");
 }
 
@@ -100,6 +101,7 @@ function deleteTask(e) {
   // remove task from local storage
   let task = e.target.parentElement.textContent;
 
+  // remove X from task
   task = task.slice(0, task.length - 1);
   console.log(task);
   const index = tasks.indexOf(task);
