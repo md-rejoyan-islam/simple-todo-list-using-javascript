@@ -5,10 +5,10 @@ const addTask = document.getElementById("add-task");
 const clearAllTask = document.getElementById("clear-all-task");
 
 // filter task input
-const filterTask = document.getElementById("filter-task") || [];
+const filterTask = document.getElementById("filter-task");
 
 // local storage task
-const tasks = JSON.parse(localStorage.getItem("tasks"));
+const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 // check if tasks is not empty
 if (tasks) {
@@ -98,8 +98,12 @@ function deleteTask(e) {
   list.removeChild(e.target.parentElement);
 
   // remove task from local storage
-  const task = e.target.parentElement.textContent;
+  let task = e.target.parentElement.textContent;
+
+  task = task.slice(0, task.length - 1);
+  console.log(task);
   const index = tasks.indexOf(task);
+  console.log(index);
   tasks.splice(index, 1);
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
