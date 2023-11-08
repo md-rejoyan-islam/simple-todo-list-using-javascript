@@ -6,4 +6,4 @@
 
 #### Live Preview
 
-<a href="">Preview</a>
+<a href="https://rejoyanislam.github.io/simple-todo-list-using-javascript/">Preview</a>
